@@ -1,0 +1,49 @@
+.container{
+    border: 1px solid rgb(156, 154, 154);
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #acc6eb;
+    border-radius: 30px;
+    margin-right: 150px;
+}
+
+.el{
+    margin: 20px 20px 5px;
+    background-color: #acc6eb;
+}
+
+label{
+    font-style: italic;
+    margin-right: 10px;
+    background-color: #acc6eb;
+    font-family:'Courier New', Courier;
+    color: rgb(50, 47, 49);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+input{
+    border: 0.5px solid rgb(93, 90, 90);
+    font-style: italic;
+    background-color: #acc6eb;
+    text-align: center;
+    width: 155px;
+    font-family:'Courier New', Courier;
+    border-radius: 7px;
+}
+
+h3{
+    margin-left: 20px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #acc6eb;
+    font-weight: 800;
+    color: rgb(205, 50, 107);
+}
+
+marquee{
+    background-color: #acc6eb;
+}

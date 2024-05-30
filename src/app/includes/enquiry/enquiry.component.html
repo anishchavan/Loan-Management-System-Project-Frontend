@@ -1,0 +1,30 @@
+<form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <marquee behavior="alternate" direction="right"><h3>Register here...</h3></marquee>
+        <div class="el">
+        <label for="applicantId">Enter id:</label>
+        <input id="applicantId" name="applicantId" type="text" formControlName="applicantId" placeholder="Applicant Id" autofocus/>
+    </div>
+    <div class="el">
+        <label for="applicantName">Enter name:</label>
+        <input id="applicantName" name="applicantName" type="text" formControlName="applicantName" placeholder="Applicant Name" />
+    </div>
+    <div class="el">
+        <label for="panCardNo">Enter pancard number:</label>
+        <input id="panCardNo" name="panCardNo" type="text" formControlName="panCardNo" placeholder="Pancard Number" />
+    </div>
+    <div class="el">
+        <label for="applicantMobileNo">Enter mobile number:</label>
+        <input id="applicantMobileNo" name="applicantMobileNo" type="text" formControlName="applicantMobileNo" placeholder="Mobile Number" />
+    </div>
+    <div class="el">
+        <label for="applicantEmail">Enter email id:</label>
+        <input id="applicantEmail" name="applicantEmail" type="text" formControlName="applicantEmail" placeholder="Email Id" />
+    </div>
+
+    <div class="btn mt-3 ">
+        <button class="btn btn-outline-primary">Submit</button>
+    </div>
+</div>
+</form>
+

@@ -1,0 +1,36 @@
+.home{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.home img{
+    margin-top: 35px;
+    width: 90%;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.features{
+    font-family: serif;
+    border: 1px solid gray;
+    height: 450px;
+    padding: 35px 20px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.features:hover {animation: shaking 0.5s infinite;}
+@keyframes shaking {
+   0% {transform: rotate(0deg);}
+   20% {transform: rotate(-4deg);}
+   50% {transform: rotate(0deg);}
+   70% {transform: rotate(4deg);}
+   100% {transform: rotate(0deg);}
+
+}

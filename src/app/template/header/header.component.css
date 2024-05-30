@@ -1,0 +1,49 @@
+.container-fluid{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#8C6692;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#8C6692;;
+}
+
+.logo img{
+    background-color:#8C6692;
+    color: white;
+}
+
+.logo h1{
+    margin-left: 50px;
+    background-color:#8C6692;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+.navlinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#8C6692;
+}
+
+a{
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 50px;
+    color: white;
+    background-color:#8C6692;
+    font-weight: 700;
+}
+
+a:hover{
+    color: black;
+}
