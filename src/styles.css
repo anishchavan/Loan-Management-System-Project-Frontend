@@ -3,6 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(197, 170, 170); */
-    background-color: #b1a1b1;
 }
+
+
+body {
+    background-image: url('./assets/images/bgimg.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  
+}
+

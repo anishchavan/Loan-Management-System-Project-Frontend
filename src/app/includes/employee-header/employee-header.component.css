@@ -1,0 +1,18 @@
+nav{
+    padding: 20px;
+    box-shadow: 0px 10px 20px 0px black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    color: rgb(96, 28, 28);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+b{
+    color: rgb(49, 11, 11);
+    font-weight: 600;
+}

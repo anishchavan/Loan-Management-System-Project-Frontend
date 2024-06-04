@@ -1,0 +1,46 @@
+.container{
+    width: 350px;
+    height: 460px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 20px;
+    background-color: #a7a9a9;
+}
+
+div{
+    padding: 7px;
+}
+
+label{
+    font-size: 17px;
+}
+
+.heading{
+    text-align: center;
+}
+
+input{
+    padding: 4px;
+    border-radius: 7px;
+    text-align: center;
+    width: 285px;
+}
+
+::placeholder {
+    color: rgb(200, 127, 204);
+    opacity:0.6;
+}
+
+.btn{
+    font-size: 20x;
+    font-weight: 700;
+    width: 100px;
+    margin-left: 45px;
+    margin-top: 4px;
+}
+
+

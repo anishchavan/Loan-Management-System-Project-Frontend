@@ -3,5 +3,7 @@ export class Enquiry {
     applicantName:string;
     panCardNo:string;
     applicantMobileNo:number;
-    applicantEmail:string
+    applicantEmail:string;
+    cibilScore:number;
+    cibilStatus:string
 }

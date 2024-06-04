@@ -1,0 +1,28 @@
+
+<div class="container">
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="heading">
+        <h3>Add Employee</h3>
+    </div>
+
+    <div class="el">
+        <label for="employeeName">Enter Name:</label>
+        <input type="text" id="employeeName" name="employeeName" formControlName="employeeName" placeholder="Employee Name">
+    </div>
+    <div class="el">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" name="username" formControlName="username" placeholder="Employee Username">
+    </div>
+    <div class="el">
+        <label for="password">Enter Password:</label>
+        <input type="text" id="password" name="password" formControlName="password" placeholder="Employee Password">
+    </div>
+    <div class="el">
+        <label for="employeeType">Enter Employee Type:</label>
+        <input type="text" id="employeeType" name="employeeType" formControlName="employeeType" placeholder="Employee Type">
+    </div>
+    <div class="btn">
+        <button class="btn btn-outline-primary">Submit</button>
+    </div>
+</form>
+</div>

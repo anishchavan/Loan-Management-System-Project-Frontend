@@ -20,13 +20,15 @@ export class EnquiryComponent implements OnInit {
       applicantName:[],
       panCardNo:[],
       applicantMobileNo:[],
-      applicantEmail:[]
+      applicantEmail:[],
+      cibilScore:null,
+      cibilStatus:null
     })
   }
 
   onSubmit(){
     this.enquiryService.saveApplicant(this.enquiryForm.value).subscribe();
-    alert("Applicant registered successfully. Our Customer Representative  will contact you shortly");
+    alert("Applicant registered successfully. Our Customer Representative will contact you shortly");
   }
 
 

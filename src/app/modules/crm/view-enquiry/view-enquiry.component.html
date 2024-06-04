@@ -1,0 +1,25 @@
+<!-- <p>view-enquiry works!</p> -->
+<table>
+    <thead>
+      <tr>
+        <th>Applicant ID</th>
+        <th>Applicant Name</th>
+        <th>Applicant Email</th>
+        <th>Applicant Mobile No</th>
+        <th>PAN Card No</th>
+        <th>CIBIL Score</th>
+        <th>CIBIL Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let enquiry of enquiries">
+        <td>{{ enquiry.applicantId }}</td>
+        <td>{{ enquiry.applicantName }}</td>
+        <td>{{ enquiry.applicantEmail }}</td>
+        <td>{{ enquiry.applicantMobileNo }}</td>
+        <td>{{ enquiry.panCardNo }}</td>
+        <td>{{ enquiry.cibilScore }}</td>
+        <td>{{ enquiry.cibilStatus }}</td>
+      </tr>
+    </tbody>
+  </table>

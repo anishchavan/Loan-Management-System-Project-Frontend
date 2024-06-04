@@ -1,0 +1,27 @@
+.login{
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 30px;
+    align-items: center;
+    margin: 200px auto;
+    border: 1px solid gray;
+    width: 300px;
+    background-color: #d7d3d3;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+input, button{
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+button{
+    width: 100px;
+}
+
+

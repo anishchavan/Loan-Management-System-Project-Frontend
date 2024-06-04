@@ -1,0 +1,22 @@
+<!-- <p>view-employee works!</p> -->
+
+<table>
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Employee Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employeeId }}</td>
+        <td>{{ employee.employeeName }}</td>
+        <td>{{ employee.username }}</td>
+        <td>{{ employee.password }}</td>
+        <td>{{ employee.employeeType }}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -12,4 +12,8 @@ export class EnquiryService {
   saveApplicant(enquire:Enquiry){
     return this.http.post("http://anishchavan:8080/consumer/register/applicant", enquire);
   }
+
+  getEnquiries(){
+    return this.http.get("http://anishchavan:8080/consumer/register/applicants");
+  }
 }

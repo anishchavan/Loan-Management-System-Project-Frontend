@@ -13,6 +13,11 @@ import { AboutComponent } from './template/about/about.component';
 import { HomeComponent } from './template/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeLayoutComponent } from './includes/employee-layout/employee-layout.component';
+import { EmployeeHeaderComponent } from './includes/employee-header/employee-header.component';
+import { SideNavbarComponent } from './includes/side-navbar/side-navbar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     AboutComponent,
     HomeComponent,
+    EmployeeLayoutComponent,
+    EmployeeHeaderComponent,
+    SideNavbarComponent,
+
   ],
   imports: [
     BrowserModule,
