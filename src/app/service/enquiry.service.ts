@@ -10,10 +10,10 @@ export class EnquiryService {
   constructor(private http:HttpClient) { }
 
   saveApplicant(enquire:Enquiry){
-    return this.http.post("http://anishchavan:8080/consumer/register/applicant", enquire);
+    return this.http.post("http://localhost:8080/consumer/register/applicant", enquire);
   }
 
   getEnquiries(){
-    return this.http.get("http://anishchavan:8080/consumer/register/applicants");
+    return this.http.get("http://localhost:8080/consumer/register/applicants");
   }
 }
