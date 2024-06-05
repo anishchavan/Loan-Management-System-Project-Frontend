@@ -13,14 +13,14 @@ export class EmployeeService {
   loginCheck(un:string, ps:string){
     console.log(un);
     console.log(ps);
-    return this.http.get(`http://anishchavan:8080/consumer/register/login/${un}/${ps}`);    
+    return this.http.get(`http://localhost:8080/consumer/register/login/${un}/${ps}`);    
   }
 
   saveEmployee(emp:Employee){
-    return this.http.post(`http://anishchavan:8080/consumer/register/employee`,emp);
+    return this.http.post(`http://localhost:8080/consumer/register/employee`,emp);
   }
 
   getEmployees(){
-    return this.http.get(`http://anishchavan:8080/consumer/register/employees`);
+    return this.http.get(`http://localhost:8080/consumer/register/employees`);
   }
 }
