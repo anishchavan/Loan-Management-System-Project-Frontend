@@ -9,6 +9,7 @@ export class EmployeeMenu {
             "CRM":[
                           {label:"View Enroll Enquiry" , link:"view_enroll_enq" },
                           {label:"View Verified Enquiry" , link:"view_verified_enq" },
+                          {label:"Fill Application Form", link:"fill_application_form"},
                           {label:"View Loan Application" , link:"view_loan_app"},
                           
                    ],

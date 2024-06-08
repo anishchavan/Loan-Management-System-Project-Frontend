@@ -1,0 +1,31 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+mat-form-field input::placeholder {
+  opacity: 0.5 !important;
+  color: #c41212 !important;
+}
+
+input {
+  margin: 10px 0px;
+}
+
+h6 {
+  margin-top: 20px;
+}
+
+.mat-label {
+  width: 200%;
+  font-weight: 700;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  width: 150px;
+  background-color: rgb(211, 254, 255);
+  padding-right: 10px;
+  margin-right: 50px;
+}

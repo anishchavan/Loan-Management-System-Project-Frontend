@@ -1,0 +1,594 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+<form [formGroup]="customerDetails" (ngSubmit)="onSubmit()">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Customer Details</div></ng-template
+      >
+      <mat-form-field appearance="fill">
+        <h6><mat-label>First Name</mat-label></h6>
+        <input
+          matInput
+          placeholder="First name"
+          formControlName="customerFirstName"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Middle Name</mat-label></h6>
+        <input
+          matInput
+          placeholder="Middle name"
+          formControlName="customerMiddleName"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Last Name</mat-label></h6>
+        <input
+          matInput
+          placeholder="Last name"
+          formControlName="customerLastName"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Mobile Number</mat-label></h6>
+        <input
+          matInput
+          placeholder="Mobile Number"
+          formControlName="mobileNumber"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Email Id</mat-label></h6>
+        <input
+          matInput
+          placeholder="Email Id"
+          formControlName="customerEmailId"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Pancard Number</mat-label></h6>
+        <input
+          matInput
+          placeholder="Pancard Number"
+          formControlName="panCardNumber"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Aadhar Number</mat-label></h6>
+        <input
+          matInput
+          placeholder="Aadhar Number"
+          formControlName="aadharNumber"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Date Of Birth</mat-label></h6>
+        <input
+          matInput
+          placeholder="Date Of Birth"
+          formControlName="customerDateOfBirth"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Gender</mat-label></h6>
+        <input matInput placeholder="Gender" formControlName="customerGender" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Qualification</mat-label></h6>
+        <input
+          matInput
+          placeholder="Qualification"
+          formControlName="qualification"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Cibil Score</mat-label></h6>
+        <input
+          matInput
+          placeholder="Cibil Score"
+          formControlName="customerCibilScore"
+        />
+      </mat-form-field>
+      <div>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Address Details</div></ng-template
+      >
+      <div formGroupName="customerAddress">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Area Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="areaName"
+            placeholder="Area name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>City Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="cityName"
+            placeholder="City Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>District</mat-label></h6>
+          <input
+            matInput
+            formControlName="district"
+            placeholder="District"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>State</mat-label></h6>
+          <input matInput placeholder="State" formControlName="state" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Pincode</mat-label></h6>
+          <input matInput placeholder="Pincode" formControlName="pincode" />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Bank Details</div></ng-template
+      >
+      <div formGroupName="customerBankDetails">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Account Holder Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="accountHolderName"
+            placeholder="Account Holder Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Bank Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="bankName"
+            placeholder="Bank Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Bank Account Number</mat-label></h6>
+          <input
+            matInput
+            formControlName="bankAccountNumber"
+            placeholder="Bank Account Number"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>IFSC Code</mat-label></h6>
+          <input
+            matInput
+            formControlName="ifscCode"
+            placeholder="IFSC Code"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Employment Details</div></ng-template
+      >
+      <div formGroupName="employmentDetails">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Employer Name</mat-label></h6>
+          <input
+            matInput
+            placeholder="Employer Name"
+            formControlName="employerName"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Employer Contact</mat-label></h6>
+          <input
+            matInput
+            placeholder="Employer Contact"
+            formControlName="employerContact"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Employer Email</mat-label></h6>
+          <input
+            matInput
+            placeholder="Employer Email"
+            formControlName="employerEmail"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Working From</mat-label></h6>
+          <input
+            matInput
+            placeholder="Working From"
+            formControlName="workingFrom"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Designation</mat-label></h6>
+          <input
+            matInput
+            placeholder="Designation"
+            formControlName="designation"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Organization Type</mat-label></h6>
+          <input
+            matInput
+            placeholder="Organization Type"
+            formControlName="orgType"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Monthly Income</mat-label></h6>
+          <input
+            matInput
+            placeholder="Monthly Income"
+            formControlName="monthlyIncome"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Guarantor Details</div></ng-template
+      >
+      <div formGroupName="guarantorDetails">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Guarantor Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="guarantorName"
+            placeholder="Guarantor Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Guarantor Address</mat-label></h6>
+          <input
+            matInput
+            formControlName="guarantorAddress"
+            placeholder="Guarantor Address"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Mobile Number</mat-label></h6>
+          <input
+            matInput
+            formControlName="mobileNumber"
+            placeholder="Mobile Number"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Designation</mat-label></h6>
+          <input
+            matInput
+            formControlName="designation"
+            placeholder="Designation"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning" style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Loan Disbursement</div></ng-template
+      >
+      <div formGroupName="loanDisbursement">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Sanctioned Amount</mat-label></h6>
+          <input
+            matInput
+            placeholder="Loan Sanctioned Amount"
+            formControlName="totalLoanSanctionedAmount"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Transfered Amount</mat-label></h6>
+          <input
+            matInput
+            placeholder="Transfered Amount"
+            formControlName="transferedAmount"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Amount Paid Date</mat-label></h6>
+          <input
+            matInput
+            placeholder="Amount Paid Date"
+            formControlName="amountPaidDate"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Payment Status</mat-label></h6>
+          <input
+            matInput
+            placeholder="Payment Status"
+            formControlName="paymentStatus"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Bank Account Number</mat-label></h6>
+          <input
+            matInput
+            placeholder="Bank Account Number"
+            formControlName="bankAccountNumber"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Bank IFSC Number</mat-label></h6>
+          <input
+            matInput
+            placeholder="Bank IFSC Number"
+            formControlName="bankIfscNumber"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Previous Loan Details</div></ng-template
+      >
+      <div formGroupName="previousLoanDetails">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Loan Amount</mat-label></h6>
+          <input
+            matInput
+            formControlName="loanAmount"
+            placeholder="Loan Amount"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Loan Tenure</mat-label></h6>
+          <input
+            matInput
+            formControlName="loanTenure"
+            placeholder="Loan Tenure"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Paid Amount</mat-label></h6>
+          <input
+            matInput
+            formControlName="paidAmount"
+            placeholder="Paid Amount"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Remaining Amount</mat-label></h6>
+          <input
+            matInput
+            formControlName="remainingAmount"
+            placeholder="Remaining Amount"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Bank Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="bankName"
+            placeholder="Bank Name"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Property Details</div></ng-template
+      >
+      <div formGroupName="propertyDetails">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Property Address</mat-label></h6>
+          <input
+            matInput
+            formControlName="propertyAddress"
+            placeholder="Property Address"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Property Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="propertyName"
+            placeholder="Property Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Property Amount</mat-label></h6>
+          <input
+            matInput
+            formControlName="propertyAgreementAmount"
+            placeholder="Property Agreement Amount"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="btn btn-warning" style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Sanction Letter</div></ng-template
+      >
+      <div formGroupName="sanctionLetter">
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Applicant Name</mat-label></h6>
+          <input
+            matInput
+            formControlName="applicantName"
+            placeholder="Applicant Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Amount Sanctioned</mat-label></h6>
+          <input
+            matInput
+            formControlName="loanAmountSanctioned"
+            placeholder="Loan Amount Sanctioned"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Rate Of Interest</mat-label></h6>
+          <input
+            matInput
+            formControlName="rateOfInterest"
+            placeholder="Rate Of Interest"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Loan Tenure</mat-label></h6>
+          <input
+            matInput
+            formControlName="loanTenure"
+            placeholder="Loan Tenure"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Monthly EMI Amount</mat-label></h6>
+          <input
+            matInput
+            formControlName="monthlyEmiAmount"
+            placeholder="Monthly EMI Amount"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <h6><mat-label>Terms And Conditions</mat-label></h6>
+          <input
+            matInput
+            formControlName="termsAndCondition"
+            placeholder="Terms And Conditions"
+            required
+          />
+        </mat-form-field>
+        <!-- <mat-form-field appearance="fill"> -->
+        <h6><mat-label>Sanction Letter</mat-label></h6>
+        <input
+          type="file"
+          formControlName="sanctionLetter"
+          placeholder="Sanction Letter"
+          required
+        />
+        <!-- </mat-form-field> -->
+      </div>
+      <div>
+        <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-success" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="customerDetails">
+      <ng-template matStepLabel
+        ><div class="mat-label">Document Uploads</div></ng-template
+      >
+      <div formGroupName="customerDocuments">
+        <!-- <mat-form-field appearance="fill"> -->
+        <h6><mat-label>Pancard</mat-label></h6>
+        <input
+          type="file"
+          formControlName="panCard"
+          placeholder="Pancard"
+          required
+        />
+        <h6><mat-label>Aadhar Card</mat-label></h6>
+        <input
+          type="file"
+          formControlName="aadharCard"
+          placeholder="Aadhar Card"
+          required
+        />
+        <h6><mat-label>Photo</mat-label></h6>
+        <input
+          type="file"
+          formControlName="photo"
+          placeholder="Photo"
+          required
+        />
+
+        <h6><mat-label>Salary Slip</mat-label></h6>
+        <input
+          type="file"
+          formControlName="salarySlips"
+          placeholder="Salary Slip"
+          required
+        />
+
+        <h6><mat-label>Bank Statement</mat-label></h6>
+        <input
+          type="file"
+          formControlName="bankStatement"
+          placeholder="Bank Statement"
+          required
+        />
+      </div>
+      <ng-template matStepLabel>Done</ng-template>
+      <p style="color:green;  font-weight: 700;">You are done now.</p>
+      <div>
+        <button class="btn btn-warning" style="margin-right: 5px;" matStepperPrevious>Back</button>
+        <button class="btn btn-danger"  style="margin-right: 5px;" (click)="stepper.reset()">Reset</button>
+        <button class="btn btn-success">Submit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</form>
