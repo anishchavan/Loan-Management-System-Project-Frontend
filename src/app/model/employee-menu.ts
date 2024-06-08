@@ -13,7 +13,10 @@ export class EmployeeMenu {
                           {label:"View Loan Application" , link:"view_loan_app"},
                           
                    ],
-            "OE":null,
+            "OE":[
+                            {label:"Pending Enquirys" , link:"pendingEnquiry" },
+                            {label:"Check CIBIL Score" , link:"checkCIBIL" } 
+            ],
             "CM":null,
             "AH":"null"
          }
