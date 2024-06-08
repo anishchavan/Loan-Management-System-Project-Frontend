@@ -5,5 +5,5 @@ export class Enquiry {
     applicantMobileNo:number;
     applicantEmail:string;
     cibilScore:number;
-    cibilStatus:string
+    cibilStatus:string;
 }

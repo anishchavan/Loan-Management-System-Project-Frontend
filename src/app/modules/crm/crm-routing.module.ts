@@ -5,7 +5,8 @@ import { ViewVerifiedEnquiryComponent } from './view-verified-enquiry/view-verif
 
 const routes: Routes = [
   {path:'view_enroll_enq', component:ViewEnquiryComponent},
-{path:'view_verified_enq', component:ViewVerifiedEnquiryComponent}
+{path:'view_verified_enq', component:ViewVerifiedEnquiryComponent},
+// {path:'apply/:data', component:}
 ];
 
 @NgModule({
