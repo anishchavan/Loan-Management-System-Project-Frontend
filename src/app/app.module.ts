@@ -16,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeeLayoutComponent } from './includes/employee-layout/employee-layout.component';
 import { EmployeeHeaderComponent } from './includes/employee-header/employee-header.component';
 import { SideNavbarComponent } from './includes/side-navbar/side-navbar.component';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CrmModule } from './modules/crm/crm.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +39,8 @@ import { SideNavbarComponent } from './includes/side-navbar/side-navbar.componen
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    CrmModule
   ],
   providers: [],
   bootstrap: [AppComponent],

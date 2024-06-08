@@ -5,23 +5,35 @@ import { CrmRoutingModule } from './crm-routing.module';
 import { AddEnquiryComponent } from './add-enquiry/add-enquiry.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
 import { ViewVerifiedEnquiryComponent } from './view-verified-enquiry/view-verified-enquiry.component';
-
+import { ApplicationFormComponent } from './application-form/application-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AddEnquiryComponent,
     ViewEnquiryComponent,
-    ViewVerifiedEnquiryComponent
+    ViewVerifiedEnquiryComponent,
+    ApplicationFormComponent,
   ],
   imports: [
     CommonModule,
-    CrmRoutingModule
+    CrmRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
-  exports:[
+  exports: [
     AddEnquiryComponent,
     ViewEnquiryComponent,
-    ViewVerifiedEnquiryComponent
-  ]
-
+    ViewVerifiedEnquiryComponent,
+    ApplicationFormComponent,
+  ],
 })
-export class CrmModule { }
+export class CrmModule {}
