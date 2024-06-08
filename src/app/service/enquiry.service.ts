@@ -16,4 +16,14 @@ export class EnquiryService {
   getEnquiries(){
     return this.http.get("http://localhost:8080/consumer/register/applicants");
   }
+  getPendingEnquiries(){
+    return this.http.get("http://localhost:8080/consumer/register/enquiries/pending");
+  }
+  checkCibil(enquiry:Enquiry)
+  {
+    return this.http.put("http://localhost:8081/CheckCIBIL/"+enquiry.applicantId,enquiry);
+  }
+  getapprovedEnquiries(){
+    return this.http.get("http://localhost:8080/consumer/register/enquiries/approved");
+  }
 }

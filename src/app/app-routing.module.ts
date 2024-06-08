@@ -19,7 +19,8 @@ const routes: Routes = [
 {
   path:'homeloan', component:EmployeeLayoutComponent, children:[
     {path:"ADMIN", loadChildren:()=>import("./modules/admin/admin.module").then(file=>file.AdminModule)},
-    {path:"CRM", loadChildren:()=>import("./modules/crm/crm.module").then(file=>file.CrmModule)}
+    {path:"CRM", loadChildren:()=>import("./modules/crm/crm.module").then(file=>file.CrmModule)},
+    {path:"OE", loadChildren:()=>import("./modules/oe/oe.module").then(file=>file.OeModule)}
   ]
 }
 

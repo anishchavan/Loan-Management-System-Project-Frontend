@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Applicant ID</th>
+      <th>Applicant Name</th>
+      <th>Applicant Email</th>
+      <th>Applicant Mobile No</th>
+      <th>PAN Card No</th>
+      <th>CIBIL Score</th>
+      <th>CIBIL Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of enq">
+      <td>{{ e.applicantId }}</td>
+      <td>{{ e.applicantName }}</td>
+      <td>{{ e.applicantEmail }}</td>
+      <td>{{ e.applicantMobileNo }}</td>
+      <td>{{ e.panCardNo }}</td>
+      <td>{{ e.cibilScore }}</td>
+      <td>{{ e.cibilStatus }}</td>
+    </tr>
+  </tbody>
+</table>
