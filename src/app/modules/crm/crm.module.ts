@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CrmRoutingModule } from './crm-routing.module';
-import { AddEnquiryComponent } from './add-enquiry/add-enquiry.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
 import { ViewVerifiedEnquiryComponent } from './view-verified-enquiry/view-verified-enquiry.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
@@ -14,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    AddEnquiryComponent,
     ViewEnquiryComponent,
     ViewVerifiedEnquiryComponent,
     ApplicationFormComponent,
@@ -30,7 +28,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
   ],
   exports: [
-    AddEnquiryComponent,
     ViewEnquiryComponent,
     ViewVerifiedEnquiryComponent,
     ApplicationFormComponent,

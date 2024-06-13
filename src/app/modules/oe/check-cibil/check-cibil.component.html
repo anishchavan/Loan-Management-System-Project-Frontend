@@ -7,8 +7,8 @@
         <th>Applicant Email</th>
         <th>Applicant Mobile No</th>
         <th>PAN Card No</th>
-        <th>CIBIL Score</th>
         <th>CIBIL Status</th>
+        <th>Check CIBIL</th>
       </tr>
     </thead>
     <tbody>
@@ -18,9 +18,8 @@
         <td>{{ enquiry.applicantEmail }}</td>
         <td>{{ enquiry.applicantMobileNo }}</td>
         <td>{{ enquiry.panCardNo }}</td>
-        <td>{{ enquiry.cibilScore }}</td>
         <td>{{ enquiry.cibilStatus }}</td>
-        <td><button class="btn btn-primary" (click)="checkCibil(enquiry)">Check Cibil</button></td>
+        <td><button class="btn btn-primary py-0" (click)="checkCibil(enquiry)">Check Cibil</button></td>
       </tr>
     </tbody>
   </table>

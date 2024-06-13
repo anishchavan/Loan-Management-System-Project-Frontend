@@ -26,6 +26,7 @@ export class AddEmployeeComponent implements OnInit {
   onSubmit(){
     this.employeeService.saveEmployee(this.employeeForm.value).subscribe();
     alert("Employee has been registered successfully");
+    this.employeeForm.reset();
   }
 
 }

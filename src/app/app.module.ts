@@ -18,6 +18,7 @@ import { EmployeeHeaderComponent } from './includes/employee-header/employee-hea
 import { SideNavbarComponent } from './includes/side-navbar/side-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrmModule } from './modules/crm/crm.module';
+import { OeModule } from './modules/oe/oe.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CrmModule } from './modules/crm/crm.module';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CrmModule
+    CrmModule,
+    OeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

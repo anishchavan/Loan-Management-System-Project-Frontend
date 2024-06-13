@@ -6,23 +6,26 @@ import { Enquiry } from '../../../model/enquiry';
 @Component({
   selector: 'app-pending-enquiry',
   templateUrl: './pending-enquiry.component.html',
-  styleUrl: './pending-enquiry.component.css'
+  styleUrl: './pending-enquiry.component.css',
 })
-export class PendingEnquiryComponent implements OnInit{
-
-  constructor(private enquiryService:EnquiryService,private router:Router){}
-  enq:Enquiry[];
+export class PendingEnquiryComponent implements OnInit {
+  constructor(private enquiryService: EnquiryService, private router: Router) {}
+  enq: Enquiry[];
 
   ngOnInit(): void {
-    this.enquiryService.getPendingEnquiries().subscribe((data:Enquiry[])=>{
-      this.enq=data;
-    
-})
+    this.enquiryService.getPendingEnquiries().subscribe((data: Enquiry[]) => {
+      if(data.length!==0){
+      this.enq = data;
+      }else{
+        alert("There is no enquiries to display")
+      }
+      
+    });
   }
 
-  view(){
-  this.enq.forEach(e => {
-    console.log(e)
+  view() {
+    this.enq.forEach((e) => {
+      console.log(e);
     });
-}
+  }
 }

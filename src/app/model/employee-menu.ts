@@ -9,13 +9,13 @@ export class EmployeeMenu {
             "CRM":[
                           {label:"View Enroll Enquiry" , link:"view_enroll_enq" },
                           {label:"View Verified Enquiry" , link:"view_verified_enq" },
-                          {label:"Fill Application Form", link:"fill_application_form"},
                           {label:"View Loan Application" , link:"view_loan_app"},
                           
                    ],
             "OE":[
-                            {label:"Pending Enquirys" , link:"pendingEnquiry" },
-                            {label:"Check CIBIL Score" , link:"checkCIBIL" } 
+                            {label:"Pending Enquiries" , link:"pendingEnquiry" },
+                            {label:"Check CIBIL Score" , link:"checkCIBIL" }, 
+                            {label:"Applied Application", link:"appliedApplication"}
             ],
             "CM":null,
             "AH":"null"

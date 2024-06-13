@@ -1,6 +1,5 @@
 <div class="container">
     <img src="../../../assets/images/employee.jpg" alt="employee image" width="100px" height="100px">
-    <!-- <h1 style="text-align: center;">Navigation Bar</h1> -->
     <div *ngFor="let btn of employeeRoles" class="text-center">
         <button class="btn btn-primary mt-2" [routerLink]="[employeeType,btn.link]">{{btn.label}}</button>
     </div>

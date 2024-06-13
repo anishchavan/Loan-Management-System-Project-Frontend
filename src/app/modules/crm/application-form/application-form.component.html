@@ -1,12 +1,9 @@
-<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button> -->
-<form [formGroup]="customerDetails" (ngSubmit)="onSubmit()">
+<h1 style="text-align: center; color: gray; margin-top:0px;">Application Form</h1>
+<form [formGroup]="customerDetails">
   <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="customerDetails">
+    <mat-step [stepControl]="customerDetails" class="custom-step">
       <ng-template matStepLabel
-        ><div class="mat-label">Customer Details</div></ng-template
-      >
+        ><div class="mat-label">Customer Details</div></ng-template>
       <mat-form-field appearance="fill">
         <h6><mat-label>First Name</mat-label></h6>
         <input
@@ -74,6 +71,10 @@
       <mat-form-field appearance="fill">
         <h6><mat-label>Gender</mat-label></h6>
         <input matInput placeholder="Gender" formControlName="customerGender" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h6><mat-label>Loan Status</mat-label></h6>
+        <input matInput placeholder="Loan Status" formControlName="customerLoanStatus" readonly />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <h6><mat-label>Qualification</mat-label></h6>
@@ -307,7 +308,7 @@
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="customerDetails">
+    <!-- <mat-step [stepControl]="customerDetails">
       <ng-template matStepLabel
         ><div class="mat-label">Loan Disbursement</div></ng-template
       >
@@ -365,7 +366,7 @@
         <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
         <button class="btn btn-success" matStepperNext>Next</button>
       </div>
-    </mat-step>
+    </mat-step> -->
 
     <mat-step [stepControl]="customerDetails">
       <ng-template matStepLabel
@@ -463,7 +464,7 @@
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="customerDetails">
+    <!-- <mat-step [stepControl]="customerDetails">
       <ng-template matStepLabel
         ><div class="mat-label">Sanction Letter</div></ng-template
       >
@@ -522,21 +523,22 @@
             required
           />
         </mat-form-field>
-        <!-- <mat-form-field appearance="fill"> -->
+       
         <h6><mat-label>Sanction Letter</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectSanctionLetter($event)"
           formControlName="sanctionLetter"
           placeholder="Sanction Letter"
           required
         />
-        <!-- </mat-form-field> -->
+        <img [src]="sanctionLetterImg" height="70">
+    
       </div>
       <div>
         <button class="btn btn-warning"  style="margin-right: 5px;" matStepperPrevious>Back</button>
         <button class="btn btn-success" matStepperNext>Next</button>
       </div>
-    </mat-step>
+    </mat-step> -->
 
     <mat-step [stepControl]="customerDetails">
       <ng-template matStepLabel
@@ -546,48 +548,52 @@
         <!-- <mat-form-field appearance="fill"> -->
         <h6><mat-label>Pancard</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectPanCard($event)"
           formControlName="panCard"
           placeholder="Pancard"
           required
         />
+        <!-- <img [src]="panCardImg" height="70"> -->
         <h6><mat-label>Aadhar Card</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectAadharCard($event)"
           formControlName="aadharCard"
           placeholder="Aadhar Card"
           required
         />
+        <!-- <img [src]="aadharCardImg" height="70"> -->
         <h6><mat-label>Photo</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectPhoto($event)"
           formControlName="photo"
           placeholder="Photo"
           required
         />
-
+        <!-- <img [src]="photoImg" height="70"> -->
         <h6><mat-label>Salary Slip</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectSalarySlips($event)"
           formControlName="salarySlips"
           placeholder="Salary Slip"
           required
         />
-
+        <!-- <img [src]="salarySlipsImg" height="70"> -->
         <h6><mat-label>Bank Statement</mat-label></h6>
         <input
-          type="file"
+          type="file" (change)="onselectBankStatement($event)"
           formControlName="bankStatement"
           placeholder="Bank Statement"
           required
         />
+        <!-- <img [src]="bankStatementImg" height="70"> -->
       </div>
       <ng-template matStepLabel>Done</ng-template>
       <p style="color:green;  font-weight: 700;">You are done now.</p>
       <div>
         <button class="btn btn-warning" style="margin-right: 5px;" matStepperPrevious>Back</button>
         <button class="btn btn-danger"  style="margin-right: 5px;" (click)="stepper.reset()">Reset</button>
-        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-success" (click)="onSubmit()" >Submit</button>
+        <button class="btn btn-danger" (click)="backToHome()" style="float: right;"><<<< -- Back To Home</button>
       </div>
     </mat-step>
   </mat-stepper>

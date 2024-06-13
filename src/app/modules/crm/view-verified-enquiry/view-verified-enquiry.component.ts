@@ -21,6 +21,6 @@ export class ViewVerifiedEnquiryComponent implements OnInit {
   }
   apply(applicantId:number)
   {
-    this.router.navigateByUrl('/crm/apply/'+applicantId)
+    this.router.navigateByUrl('/apply/'+applicantId)
   }
 }

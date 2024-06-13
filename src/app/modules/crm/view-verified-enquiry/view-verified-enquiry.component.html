@@ -8,6 +8,7 @@
         <th>PAN Card No</th>
         <th>CIBIL Score</th>
         <th>CIBIL Status</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +20,7 @@
         <td>{{ e.panCardNo }}</td>
         <td>{{ e.cibilScore }}</td>
         <td>{{ e.cibilStatus }}</td>
-        <td><button (click)="apply(e.applicantId)">Apply Application</button></td>
+        <td><button (click)="apply(e.applicantId)">Apply for loan</button></td>
       </tr>
     </tbody>
   </table>

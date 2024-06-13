@@ -8,14 +8,16 @@ import { Observable } from 'rxjs';
 })
 export class ApplicationFormService {
 
-  private apiUrl = 'https://your-api-url.com/api/application';
+  private url = 'http://localhost:8084/customer/saveCustomer';
 
   constructor(private http: HttpClient) { }
 
-  saveApplicationForm(customerDetails: CustomerDetails): Observable<any> {
-    console.log(customerDetails);
-    return this.http.post(this.apiUrl, customerDetails);
+  saveApplicationForm(formData:any): Observable<any> {
+   console.log(formData);
+    return this.http.post(this.url, formData);
     
   }
+
+  
 
 }

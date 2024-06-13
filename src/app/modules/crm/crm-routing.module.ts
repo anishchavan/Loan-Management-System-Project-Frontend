@@ -7,8 +7,8 @@ import { ApplicationFormComponent } from './application-form/application-form.co
 const routes: Routes = [
   {path:'view_enroll_enq', component:ViewEnquiryComponent},
   {path:'view_verified_enq', component:ViewVerifiedEnquiryComponent},
-  {path:'fill_application_form', component:ApplicationFormComponent},
-// {path:'apply/:data', component:}
+ {path:'apply/:data', component:ApplicationFormComponent},
+ {path:'home/about/:data', component:ViewEnquiryComponent}
 ];
 
 @NgModule({

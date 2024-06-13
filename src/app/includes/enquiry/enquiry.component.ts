@@ -30,6 +30,7 @@ export class EnquiryComponent implements OnInit {
     console.log("onSubmit executed..");
     this.enquiryService.saveApplicant(this.enquiryForm.value).subscribe();
     alert("Applicant registered successfully. Our Customer Representative will contact you shortly");
+    this.enquiryForm.reset();
   }
 
 

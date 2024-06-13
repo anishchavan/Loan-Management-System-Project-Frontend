@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApplicationFormService } from '../../../service/application-form.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-application-form',
@@ -9,11 +10,26 @@ import { ApplicationFormService } from '../../../service/application-form.servic
 })
 export class ApplicationFormComponent implements OnInit {
   customerDetails: FormGroup;
-  isLinear=false;
+  isLinear = false;
+  onSelectPanCard: any;
+  onSelectAadharCard: any;
+  onSelectPhoto: any;
+  onSelectSalarySlips: any;
+  onSelectBankStatement: any;
+  onSelectSanctionLetter: any;
+  panCardImg: any;
+  aadharCardImg: any;
+  photoImg: any;
+  salarySlipsImg: any;
+  bankStatementImg: any;
+  sanctionLetterImg: any;
+
+  reader = new FileReader();
 
   constructor(
     private fb: FormBuilder,
-    private applicationFormService: ApplicationFormService
+    private applicationFormService: ApplicationFormService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +44,7 @@ export class ApplicationFormComponent implements OnInit {
       customerDateOfBirth: [],
       customerGender: [],
       qualification: [],
+      customerLoanStatus:['Applied'],
       customerCibilScore: [],
 
       customerAddress: this.fb.group({
@@ -58,14 +75,14 @@ export class ApplicationFormComponent implements OnInit {
         mobileNumber: [],
         designation: [],
       }),
-      loanDisbursement: this.fb.group({
-        totalLoanSanctionedAmount: [],
-        transferedAmount: [],
-        amountPaidDate: [],
-        paymentStatus: [],
-        bankAccountNumber: [],
-        bankIfscNumber: [],
-      }),
+      // loanDisbursement: this.fb.group({
+      //   totalLoanSanctionedAmount: [],
+      //   transferedAmount: [],
+      //   amountPaidDate: [],
+      //   paymentStatus: [],
+      //   bankAccountNumber: [],
+      //   bankIfscNumber: [],
+      // }),
       previousLoanDetails: this.fb.group({
         loanAmount: [],
         loanTenure: [],
@@ -78,16 +95,16 @@ export class ApplicationFormComponent implements OnInit {
         propertyName: [],
         propertyAgreementAmount: [],
       }),
-      sanctionLetter: this.fb.group({
-        sanctionDate: [],
-        applicantName: [],
-        loanAmountSanctioned: [],
-        rateOfInterest: [],
-        loanTenure: [],
-        monthlyEmiAmount: [],
-        termsAndCondition: [],
-        sanctionLetter: [],
-      }),
+      // sanctionLetter: this.fb.group({
+      //   sanctionDate: [],
+      //   applicantName: [],
+      //   loanAmountSanctioned: [],
+      //   rateOfInterest: [],
+      //   loanTenure: [],
+      //   monthlyEmiAmount: [],
+      //   termsAndCondition: [],
+      //   sanctionLetter: [],
+      // }),
       customerDocuments: this.fb.group({
         panCard: [],
         aadharCard: [],
@@ -98,11 +115,58 @@ export class ApplicationFormComponent implements OnInit {
     });
   }
 
-  onSubmit(){
-    this.applicationFormService.saveApplicationForm(this.customerDetails.value).subscribe();
-    // alert("Product Registered..!");
-    // this.customerDetails.reset();
+  onselectPanCard(event) {
+    this.onSelectPanCard = event.target.files[0];
+    this.reader.onload = (e) => (this.panCardImg = this.reader.result);
+    this.reader.readAsDataURL(this.onSelectPanCard);
   }
 
- 
+  onselectAadharCard(event) {
+    this.onSelectAadharCard = event.target.files[0];
+    this.reader.onload = (e) => (this.aadharCardImg = this.reader.result);
+    this.reader.readAsDataURL(this.onSelectAadharCard);
+  }
+
+  onselectPhoto(event) {
+    this.onSelectPhoto = event.target.files[0];
+    this.reader.onload = (e) => (this.photoImg = this.reader.result);
+    this.reader.readAsDataURL(this.onSelectPhoto);
+  }
+
+  onselectSalarySlips(event) {
+    this.onSelectSalarySlips = event.target.files[0];
+    this.reader.onload = (e) => (this.salarySlipsImg = this.reader.result);
+    this.reader.readAsDataURL(this.onSelectSalarySlips);
+  }
+
+  onselectBankStatement(event) {
+    this.onSelectBankStatement = event.target.files[0];
+    this.reader.onload = (e) => (this.bankStatementImg = this.reader.result);
+    this.reader.readAsDataURL(this.onSelectBankStatement);
+  }
+
+  // onselectSanctionLetter(event) {
+  //   this.onselectSanctionLetter = event.target.files[0];
+  //   this.reader.onload = (e) => (this.sanctionLetterImg = this.reader.result);
+  //   this.reader.readAsDataURL(this.onSelectSanctionLetter);
+  // }
+
+  onSubmit() {
+    const formData = new FormData();
+    formData.append('panCard', this.onSelectPanCard);
+    formData.append('aadharCard', this.onSelectAadharCard);
+    formData.append('photo', this.onSelectPhoto);
+    formData.append('salarySlips', this.onSelectSalarySlips);
+    formData.append('bankStatement', this.onSelectBankStatement);
+    // formData.append('sanctionLetter', this.onSelectSanctionLetter);
+    formData.append('jsondata', JSON.stringify(this.customerDetails.value));
+
+    this.applicationFormService.saveApplicationForm(formData).subscribe();
+
+    alert('Customer application has been saved successfully');
+  }
+
+  backToHome() {
+    this.router.navigateByUrl('/home/about');
+  }
 }
