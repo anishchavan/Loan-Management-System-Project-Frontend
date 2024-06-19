@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CustomerDetails } from '../model/customer-details';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,10 @@ export class CustomerService {
 
   viewCustomer(){
     return this.http.get("http://localhost:8084/customer/getCustomer/SanctionLetterGenerated");
+  }
+
+  sanctionLetterAccepted(c:CustomerDetails){
+    return this.http.put(`http://localhost:8084/customer/updateCustomer/SanctionLetterGenerated/${c.customerId}`,
+      c)
   }
 }

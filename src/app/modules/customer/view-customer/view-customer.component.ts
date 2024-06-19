@@ -16,4 +16,8 @@ export class ViewCustomerComponent implements OnInit {
       this.customer = data;
     });
   }
+
+  letterAccepted(c:CustomerDetails){
+    this.cs.sanctionLetterAccepted(c).subscribe();
+  }
 }

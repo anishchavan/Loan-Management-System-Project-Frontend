@@ -10,6 +10,7 @@
       <th>Loan Tenure</th>
       <th>EMI Amount</th>
       <th>Loan Status</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -19,10 +20,15 @@
       <td>{{ c.customerLastName }}</td>
       <td>{{ c.customerEmailId }}</td>
       <td>{{ c.cibilScore }}</td>
-      <td>{{ c.sanctionLetter.loanAmountSanctioned}}</td>
-      <td>{{ c.sanctionLetter.loanTenure}}</td>
-      <td>{{ c.sanctionLetter.monthlyEmiAmount}}</td>
+      <td>{{ c.sanctionLetter.loanAmountSanctioned }}</td>
+      <td>{{ c.sanctionLetter.loanTenure }}</td>
+      <td>{{ c.sanctionLetter.monthlyEmiAmount }}</td>
       <td>{{ c.customerLoanStatus }}</td>
+      <td>
+        <div class="btn">
+          <button class="btn1" type="button" (click)="letterAccepted(c)">Accepted</button>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
