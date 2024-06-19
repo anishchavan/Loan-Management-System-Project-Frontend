@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrmModule } from './modules/crm/crm.module';
 import { OeModule } from './modules/oe/oe.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,4 +49,4 @@ import { OeModule } from './modules/oe/oe.module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
