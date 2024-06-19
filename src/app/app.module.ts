@@ -24,6 +24,8 @@ import { CustomerLoginComponent } from './includes/customer-login/customer-login
 import { LoginCompComponent } from './includes/login-comp/login-comp.component';
 import { CustomerModule } from './modules/customer/customer.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,4 +57,4 @@ import { CustomerModule } from './modules/customer/customer.module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
