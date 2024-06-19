@@ -1,9 +1,18 @@
 export class LoanDisbursement {
-    agreementId:number;
-    totalLoanSanctionedAmount:number;
-    transferedAmount:number;
-    amountPaidDate:string;
-    paymentStatus:string;
-    bankAccountNumber:number;
-    bankIfscNumber:number;
+    agreementId: number;
+    agreementDate: string;
+    totalLoanSanctionedAmount: number;
+    transferedAmount: number;
+    amountPaidDate: string;
+    paymentStatus: string;
+    bankName: string;
+    bankAccountNumber: number;
+    bankIfscCode: number;
+    accountType: string;
+
+
+
+
+
+
 }

@@ -30,7 +30,7 @@ export class ApplicationFormComponent implements OnInit {
     private fb: FormBuilder,
     private applicationFormService: ApplicationFormService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.customerDetails = this.fb.group({
@@ -44,10 +44,10 @@ export class ApplicationFormComponent implements OnInit {
       customerDateOfBirth: [],
       customerGender: [],
       qualification: [],
-      customerLoanStatus:['Applied'],
+      customerLoanStatus: ['Applied'],
       customerCibilScore: [],
-      username:[],
-      password:[],
+      username: [],
+      password: [],
 
       customerAddress: this.fb.group({
         areaName: [],
@@ -78,12 +78,15 @@ export class ApplicationFormComponent implements OnInit {
         designation: [],
       }),
       loanDisbursement: this.fb.group({
+        agreementDate: [],
         totalLoanSanctionedAmount: [],
         transferedAmount: [],
         amountPaidDate: [],
         paymentStatus: [],
+        bankName: [],
         bankAccountNumber: [],
-        bankIfscNumber: [],
+        bankIfscCode: [],
+        accountType: [],
       }),
       previousLoanDetails: this.fb.group({
         loanAmount: [],
