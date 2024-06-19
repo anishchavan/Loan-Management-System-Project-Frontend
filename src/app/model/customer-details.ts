@@ -22,6 +22,8 @@ export class CustomerDetails {
     qualification:string;
     customerLoanStatus:string;
     customerCibilScore:number;
+    username:string;
+    password:string;
 
     customerAddress:CustomerAddress;
     customerBankDetails:CustomerBankDetails;
@@ -30,5 +32,6 @@ export class CustomerDetails {
     previousLoanDetails:PreviousLoanDetails;
     propertyDetails:PropertyDetails;
     customerDocuments:CustomerDocuments;
-    loanDisbursement:LoanDisbursement
+    loanDisbursement:LoanDisbursement;
+    sanctionLetter:SanctionLetter
 }

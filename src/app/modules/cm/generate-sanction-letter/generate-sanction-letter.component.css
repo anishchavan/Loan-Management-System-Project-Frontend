@@ -1,0 +1,46 @@
+.container{
+    border:1px solid rgb(120, 116, 116);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 80px auto; */
+    padding: 20px;
+    background-color: #d7d3d3;
+    border-radius: 20px;  
+    position: fixed;  
+    left: 600px;
+}
+
+div{
+    margin-top: 7px;
+}
+
+label{
+    font-size: 18px;
+}
+
+input{
+    width: 300px;
+    text-align: center;
+    border-radius: 7px;
+    padding: 3px;
+    border: 1px solid rgb(148, 237, 238);
+}
+
+::placeholder {
+    color: rgb(200, 127, 204);
+    opacity:0.6;
+}
+
+marquee{
+    color: rgb(6, 65, 7);
+}
+
+button{
+    font-size: 20x;
+    font-weight: 700;
+    width: 100px;
+}
+
+

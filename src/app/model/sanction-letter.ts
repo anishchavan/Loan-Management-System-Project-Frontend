@@ -6,6 +6,5 @@ export class SanctionLetter {
     rateOfInterest:number;
     loanTenure:number;
     monthlyEmiAmount:number;
-    termsAndConditon:string;
     sanctionLetter:any
 }

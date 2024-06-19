@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>Customer First Name</th>
+        <th>Customer Last Name</th>
+        <th>Customer Gender</th>
+        <th>Customer Mobile No</th>
+        <th>Customer Email</th>
+        <th>Customer Loan Status</th>
+        <th>Action Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let application of applications">
+        <td>{{ application.customerId }}</td>
+        <td>{{ application.customerFirstName }}</td>
+        <td>{{ application.customerLastName }}</td>
+        <td>{{ application.customerGender }}</td>
+        <td>{{ application.mobileNumber }}</td>
+        <td>{{ application.customerEmailId}}</td>
+        <td>{{ application.customerLoanStatus }}</td>
+        <td><button type="button" (click)="verifyDocuments(application.customerId)">Verify Documents</button></td>
+      </tr>
+    </tbody>
+  </table>

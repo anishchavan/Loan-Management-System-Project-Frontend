@@ -4,6 +4,7 @@ import { PendingEnquiryComponent } from './pending-enquiry/pending-enquiry.compo
 import { CheckCIBILComponent } from './check-cibil/check-cibil.component';
 import { AppliedApplicationComponent } from './applied-application/applied-application.component';
 import { VerifyApplicationComponent } from './verify-application/verify-application.component';
+import { AboutComponent } from '../../template/about/about.component';
 
 
 
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'checkCIBIL', component: CheckCIBILComponent },
   { path: 'appliedApplication', component: AppliedApplicationComponent },
   { path: 'verifyDocs/:customerId', component: VerifyApplicationComponent },
+  { path: 'home/about', component:AboutComponent}
+  
 ];
 
 @NgModule({

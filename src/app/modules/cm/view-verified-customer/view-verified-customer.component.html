@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Customer Id</th>
+      <th>Customer First Name</th>
+      <th>Customer Last Name</th>
+      <th>Customer Mobile Number</th>
+      <th>Customer Email Id</th>
+      <th>Customer Loan Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of customer">
+      <td>{{ c.customerId }}</td>
+      <td>{{ c.customerFirstName }}</td>
+      <td>{{ c.customerLastName }}</td>
+      <td>{{ c.mobileNumber }}</td>
+      <td>{{ c.customerEmailId }}</td>
+      <td>{{ c.customerLoanStatus }}</td>
+      <td>
+        <button (click)="generateSanctionLetter(c)">
+        Generate Sanction Letter
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

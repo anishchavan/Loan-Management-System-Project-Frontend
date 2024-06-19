@@ -1,0 +1,91 @@
+<form [formGroup]="sanctionForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="heading" style="text-align: center; color: rgb(53, 40, 174)">
+      <h3>Sanction Letter Info</h3>
+    </div>
+    <div class="el">
+      <label for="customerId">Customer Id:</label>
+      <input
+        id="customerId"
+        name="customerId"
+        type="number"
+        formControlName="customerId"
+        placeholder="Enter Customer Id"
+      />
+    </div>
+    <div class="el">
+      <label for="sanctionId">Sanction Id:</label>
+      <input
+        id="sanctionId"
+        name="sanctionId"
+        type="number"
+        formControlName="sanctionId"
+        placeholder="Enter Sanction Id"
+      />
+    </div>
+    <div class="el">
+      <label for="sanctionDate">Sanction Date:</label>
+      <input
+        id="sanctionDate"
+        name="sanctionDate"
+        type="text"
+        formControlName="sanctionDate"
+        placeholder="Enter Sanction Date"
+      />
+    </div>
+    <div class="el">
+      <label for="applicantName">Applicant Name:</label>
+      <input
+        id="applicantName"
+        name="applicantName"
+        type="text"
+        formControlName="applicantName"
+        placeholder="Enter Applicant Name"
+      />
+    </div>
+    <div class="el">
+      <label for="loanAmountSanctioned">Loan Amount Sanctioned:</label>
+      <input
+        id="loanAmountSanctioned"
+        name="loanAmountSanctioned"
+        type="number"
+        formControlName="loanAmountSanctioned"
+        placeholder="Enter Loan Amount Sanctioned"
+      />
+    </div>
+    <div class="el">
+      <label for="rateOfInterest">Rate Of Interest:</label>
+      <input
+        id="rateOfInterest"
+        name="rateOfInterest"
+        type="number"
+        formControlName="rateOfInterest"
+        placeholder="Enter Rate Of Interest"
+      />
+    </div>
+    <div class="el">
+      <label for="loanTenure">Loan Tenure:</label>
+      <input
+        id="loanTenure"
+        name="loanTenure"
+        type="number"
+        formControlName="loanTenure"
+        placeholder="Enter Loan Tenure"
+      />
+    </div>
+    <div class="el">
+      <label for="monthlyEmiAmount">Monthly EMI Amount:</label>
+      <input
+        id="monthlyEmiAmount"
+        name="monthlyEmiAmount"
+        type="number"
+        formControlName="monthlyEmiAmount"
+        placeholder="EnterMonthly EMI"
+      />
+    </div>
+
+    <div class="btn mt-3">
+      <button class="btn btn-outline-primary">Submit</button>
+    </div>
+  </div>
+</form>

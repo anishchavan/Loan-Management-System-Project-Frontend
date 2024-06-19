@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
         this.router.navigateByUrl(`/homeloan/${data.employeeType}`);
       } else {
-        alert('Enver valid Credentials..!');
+        alert('Enter valid Credentials..!');
       }
     });
   }
