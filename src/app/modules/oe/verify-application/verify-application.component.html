@@ -1,0 +1,166 @@
+<div class="container">
+  <table class="table_1">
+    <tr>
+      <div class="el">
+        <h5>Customer Id :</h5>
+        <p>{{ cs.customerId }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer First Name :</h5>
+        <p>{{ cs.customerFirstName }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Last Name :</h5>
+        <p>{{ cs.customerLastName }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Gender :</h5>
+        <p>{{ cs.customerGender }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Mobile Number :</h5>
+        <p>{{ cs.mobileNumber }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Email Id :</h5>
+        <p>{{ cs.customerEmailId }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Aadhar Number :</h5>
+        <p>{{ cs.aadharNumber }}</p>
+      </div>
+      <div class="el">
+        <h5>Customer Date Of Birth :</h5>
+        <p>{{ cs.customerDateOfBirth }}</p>
+      </div>
+      <div class="el">
+        <h5>City :</h5>
+        <p>{{ cs.customerAddress.cityName }}</p>
+      </div>
+      <div class="el">
+        <h5>State :</h5>
+        <p>{{ cs.customerAddress.state }}</p>
+      </div>
+      <div class="el">
+        <h5>Employment Designation</h5>
+        <p>{{ cs.employmentDetails.designation }}</p>
+      </div>
+      <div class="el">
+        <h5>Monthly Income :</h5>
+        <p>{{ cs.employmentDetails.monthlyIncome }}</p>
+      </div>
+      <div class="el">
+        <h5>Organisation Type :</h5>
+        <p>{{ cs.employmentDetails.orgType }}</p>
+      </div>
+    </tr>
+  </table>
+  <table class="table_2">
+    <tr>
+      <div class="docs">
+        <h5>Pancard:</h5>
+        <img
+          [src]="'data:image/jpeg;base64,' + cs.customerDocuments.panCard"
+          height="110"
+        />
+      </div>
+      <div class="docs">
+        <h5>Aadhar Card:</h5>
+        <img
+          [src]="'data:image/jpeg;base64,' + cs.customerDocuments.aadharCard"
+          height="110"
+        />
+      </div>
+      <div class="docs">
+        <h5>Customer Photo:</h5>
+        <img
+          [src]="'data:image/jpeg;base64,' + cs.customerDocuments.photo"
+          height="110"
+        />
+      </div>
+      <div class="docs">
+        <h5>Salary Slip:</h5>
+        <img
+          [src]="'data:image/jpeg;base64,' + cs.customerDocuments.salarySlips"
+          height="110"
+        />
+      </div>
+      <div class="docs">
+        <h5>Bank Statement:</h5>
+        <img
+          [src]="'data:image/jpeg;base64,' + cs.customerDocuments.bankStatement"
+          height="110"
+        />
+      </div>
+    </tr>
+  </table>
+  <form
+    class="form_verify"
+    style="height: 660px"
+  >
+    <fieldset>
+      <legend
+        style="
+          text-align: center;
+          width: 300px;
+          margin-top: 20px;
+          font-weight: 600;
+        "
+      >
+        Document Status
+      </legend>
+      <div
+        style="
+          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          margin: 70px 40px 0px 40px;
+          border: 1px solid rgb(148, 148, 148);
+          padding: 5px 20px;
+          border-radius: 5px;
+        "
+      >
+        <input
+          type="radio"
+          id="verified"
+          name="choice"
+          value="verified"
+          style="transform: scale(1.5)"
+        />
+        <label for="contactChoice1">Verified</label>
+        <input
+          type="radio"
+          id="reject"
+          name="choice"
+          value="reject"
+          style="transform: scale(1.5)"
+        />
+        <label for="contactChoice2">Rejected</label>
+      </div>
+      <div style="text-align: center; margin-top: 40px">
+        <label
+          for="remark"
+          style="
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            font-style: italic;
+          "
+          >Remark on document status</label
+        >
+        <textarea
+          id="remark"
+          name="ramark"
+          rows="10"
+          cols="33"
+          placeholder="Enter your remark here..."
+          style="background-color: rgb(113, 113, 113); color: white"
+        >
+        </textarea>
+      </div>
+      <div style="text-align: center; margin-top: 20px">
+        <button type="submit" class="btn btn-outline-primary" (click)="verifyDocuments(cs)">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</div>

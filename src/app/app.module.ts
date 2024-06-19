@@ -18,7 +18,11 @@ import { EmployeeHeaderComponent } from './includes/employee-header/employee-hea
 import { SideNavbarComponent } from './includes/side-navbar/side-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrmModule } from './modules/crm/crm.module';
+import { CmModule } from './modules/cm/cm.module';
 import { OeModule } from './modules/oe/oe.module';
+import { CustomerLoginComponent } from './includes/customer-login/customer-login.component';
+import { LoginCompComponent } from './includes/login-comp/login-comp.component';
+import { CustomerModule } from './modules/customer/customer.module';
 
 
 
@@ -35,6 +39,8 @@ import { OeModule } from './modules/oe/oe.module';
     EmployeeLayoutComponent,
     EmployeeHeaderComponent,
     SideNavbarComponent,
+    CustomerLoginComponent,
+    LoginCompComponent,
 
   ],
   imports: [
@@ -44,7 +50,9 @@ import { OeModule } from './modules/oe/oe.module';
     HttpClientModule,
     BrowserAnimationsModule,
     CrmModule,
-    OeModule
+    OeModule,
+    CmModule,
+    CustomerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

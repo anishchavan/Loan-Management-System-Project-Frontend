@@ -46,6 +46,8 @@ export class ApplicationFormComponent implements OnInit {
       qualification: [],
       customerLoanStatus:['Applied'],
       customerCibilScore: [],
+      username:[],
+      password:[],
 
       customerAddress: this.fb.group({
         areaName: [],
@@ -75,14 +77,14 @@ export class ApplicationFormComponent implements OnInit {
         mobileNumber: [],
         designation: [],
       }),
-      // loanDisbursement: this.fb.group({
-      //   totalLoanSanctionedAmount: [],
-      //   transferedAmount: [],
-      //   amountPaidDate: [],
-      //   paymentStatus: [],
-      //   bankAccountNumber: [],
-      //   bankIfscNumber: [],
-      // }),
+      loanDisbursement: this.fb.group({
+        totalLoanSanctionedAmount: [],
+        transferedAmount: [],
+        amountPaidDate: [],
+        paymentStatus: [],
+        bankAccountNumber: [],
+        bankIfscNumber: [],
+      }),
       previousLoanDetails: this.fb.group({
         loanAmount: [],
         loanTenure: [],
@@ -95,16 +97,15 @@ export class ApplicationFormComponent implements OnInit {
         propertyName: [],
         propertyAgreementAmount: [],
       }),
-      // sanctionLetter: this.fb.group({
-      //   sanctionDate: [],
-      //   applicantName: [],
-      //   loanAmountSanctioned: [],
-      //   rateOfInterest: [],
-      //   loanTenure: [],
-      //   monthlyEmiAmount: [],
-      //   termsAndCondition: [],
-      //   sanctionLetter: [],
-      // }),
+      sanctionLetter: this.fb.group({
+        sanctionDate: [],
+        applicantName: [],
+        loanAmountSanctioned: [],
+        rateOfInterest: [],
+        loanTenure: [],
+        monthlyEmiAmount: [],
+        sanctionLetter: [],
+      }),
       customerDocuments: this.fb.group({
         panCard: [],
         aadharCard: [],

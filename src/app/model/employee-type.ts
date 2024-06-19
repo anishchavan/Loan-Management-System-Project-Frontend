@@ -3,5 +3,6 @@ export class EmployeeType {
     CRM:string;
     OE:string;
     AH:string;
-    CM:string
+    CM:string;
+
 }

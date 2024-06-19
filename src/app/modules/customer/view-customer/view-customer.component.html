@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Id</th>
+      <th>Cibil Score</th>
+      <th>Sanctioned Amount</th>
+      <th>Loan Tenure</th>
+      <th>EMI Amount</th>
+      <th>Loan Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of customer">
+      <td>{{ c.customerId }}</td>
+      <td>{{ c.customerFirstName }}</td>
+      <td>{{ c.customerLastName }}</td>
+      <td>{{ c.customerEmailId }}</td>
+      <td>{{ c.cibilScore }}</td>
+      <td>{{ c.sanctionLetter.loanAmountSanctioned }}</td>
+      <td>{{ c.sanctionLetter.loanTenure }}</td>
+      <td>{{ c.sanctionLetter.monthlyEmiAmount }}</td>
+      <td>{{ c.customerLoanStatus }}</td>
+      <td>
+        <div class="btn">
+          <button class="btn1" type="button" (click)="letterAccepted(c)">Accepted</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

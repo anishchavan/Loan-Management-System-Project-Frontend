@@ -1,0 +1,44 @@
+.btn{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 50px auto;
+}
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 30px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    outline: none;
+  }
+  
+
+  button[routerLink="customer"] {
+    background-color: #3498db; 
+    color: white;
+  }
+  
+  button[routerLink="customer"]:hover {
+    background-color: #0a436a; 
+  }
+  
+  
+  button[routerLink="employee"] {
+    background-color: #e74c3c; 
+    color: white;
+  }
+  
+  button[routerLink="employee"]:hover {
+    background-color: #78170d;
+  }
+  
+ 
+  button:focus {
+    border-color: #2c3e50; 
+  }
