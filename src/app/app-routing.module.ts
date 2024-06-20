@@ -56,7 +56,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/cm/cm.module').then((file) => file.CmModule),
       },
-
+      {
+        path: 'AH',
+        loadChildren: () =>
+          import('./modules/ah/ah.module').then((file) => file.AhModule),
+      },
       {
         path: 'Customer',
         loadChildren: () =>

@@ -19,7 +19,9 @@ export class EmployeeMenu {
       CM: [
         { label: 'View Verified Customer', link: 'verifiedCustomer' }
       ],
-      AH: 'null',
+      AH: [
+        { label:'Approved Customer', link:'approvedCustomer'}
+      ],
       Customer: [
         { label: 'View Customer', link: 'viewCustomer' }
       ],

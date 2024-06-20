@@ -23,6 +23,8 @@ import { OeModule } from './modules/oe/oe.module';
 import { CustomerLoginComponent } from './includes/customer-login/customer-login.component';
 import { LoginCompComponent } from './includes/login-comp/login-comp.component';
 import { CustomerModule } from './modules/customer/customer.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AhModule } from './modules/ah/ah.module';
 
 @NgModule({
   declarations: [
@@ -50,9 +52,12 @@ import { CustomerModule } from './modules/customer/customer.module';
     CrmModule,
     OeModule,
     CmModule,
-    CustomerModule
+    CustomerModule,
+    AhModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
