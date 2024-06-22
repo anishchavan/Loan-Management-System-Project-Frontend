@@ -1,0 +1,121 @@
+<form [formGroup]="loanDisburseForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="heading" style="text-align: center; color: rgb(53, 40, 174)">
+        <h3>Disbursement Info</h3>
+      </div>
+      <div class="el">
+        <label for="customerId">Customer Id:</label>
+        <input
+          id="customerId"
+          name="customerId"
+          type="number"
+          formControlName="customerId"
+          placeholder="Enter Customer Id"
+        />
+      </div>
+      <div class="el">
+        <label for="agreementId">Agreement Id:</label>
+        <input
+          id="agreementId"
+          name="agreementId"
+          type="number"
+          formControlName="agreementId"
+          placeholder="Enter Agreement Id"
+        />
+      </div>
+      <div class="el">
+        <label for="agreementDate">Agreement Date:</label>
+        <input
+          id="agreementDate"
+          name="agreementDate"
+          type="text"
+          formControlName="agreementDate"
+          placeholder="Enter Agreement Date"
+        />
+      </div>
+      <div class="el">
+        <label for="totalLoanSanctionedAmount">Total Loan Sanctioned Amount:</label>
+        <input
+          id="totalLoanSanctionedAmount"
+          name="totalLoanSanctionedAmount"
+          type="number"
+          formControlName="totalLoanSanctionedAmount"
+          placeholder="Enter Total Loan Sanctioned Amount"
+        />
+      </div>
+      <div class="el">
+        <label for="transferedAmount">Transfered Amount:</label>
+        <input
+          id="transferedAmount"
+          name="transferedAmount"
+          type="number"
+          formControlName="transferedAmount"
+          placeholder="Enter Transfered Amount"
+        />
+      </div>
+      <div class="el">
+        <label for="amountPaidDate">Amount Paid Date:</label>
+        <input
+          id="amountPaidDate"
+          name="amountPaidDate"
+          type="text"
+          formControlName="amountPaidDate"
+          placeholder="Enter Amount Paid Date"
+        />
+      </div>
+      <div class="el">
+        <label for="paymentStatus">Payment Status:</label>
+        <input
+          id="paymentStatus"
+          name="paymentStatus"
+          type="text"
+          formControlName="paymentStatus"
+          placeholder="Enter Payment Status"
+        />
+      </div>
+      <div class="el">
+        <label for="bankName">Bank Name:</label>
+        <input
+          id="bankName"
+          name="bankName"
+          type="text"
+          formControlName="bankName"
+          placeholder="Enter Bank Name"
+        />
+      </div>
+      <div class="el">
+        <label for="bankAccountNumber">Bank Account Number:</label>
+        <input
+          id="bankAccountNumber"
+          name="bankAccountNumber"
+          type="number"
+          formControlName="bankAccountNumber"
+          placeholder="Enter Bank Account Number"
+        />
+      </div>
+      <div class="el">
+        <label for="bankIfscCode">Bank Ifsc Code:</label>
+        <input
+          id="bankIfscCode"
+          name="bankIfscCode"
+          type="text"
+          formControlName="bankIfscCode"
+          placeholder="Enter Bank IfscCode"
+        />
+      </div>
+      <div class="el">
+        <label for="accountType">Account Type:</label>
+        <input
+          id="accountType"
+          name="accountType"
+          type="text"
+          formControlName="accountType"
+          placeholder="Enter Account Type"
+        />
+      </div>
+      <div class="btn mt-3">
+        <button class="btn btn-outline-primary" >Submit</button>
+      </div>
+    </div>
+  </form>
+  

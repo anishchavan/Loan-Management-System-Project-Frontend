@@ -1,0 +1,37 @@
+table, th, td{
+    border: 1px solid rgb(45, 44, 44);
+    border-collapse: collapse;
+    margin: 70px auto;
+}
+
+th{
+    color: blue;
+    padding:5px 10px;
+    text-align: center;
+}
+
+td{
+    padding:5px 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.btn{
+    display: flex;
+}
+
+.btn button{
+    margin-left: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn .btn1{
+    background-color: rgb(59, 138, 59);
+    color: white;
+}
+
+.btn .btn1:hover{
+    background-color: rgb(7, 77, 7);
+}
