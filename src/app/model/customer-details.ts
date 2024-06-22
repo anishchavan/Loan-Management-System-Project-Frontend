@@ -3,6 +3,7 @@ import { CustomerBankDetails } from "./customer-bank-details";
 import { CustomerDocuments } from "./customer-documents";
 import { EmploymentDetails } from "./employment-details";
 import { GuarantorDetails } from "./guarantor-details";
+import { Ledger } from "./ledger";
 import { LoanDisbursement } from "./loan-disbursement";
 import { PreviousLoanDetails } from "./previous-loan-details";
 import { PropertyDetails } from "./property-details";
@@ -33,5 +34,6 @@ export class CustomerDetails {
     propertyDetails:PropertyDetails;
     customerDocuments:CustomerDocuments;
     loanDisbursement:LoanDisbursement;
-    sanctionLetter:SanctionLetter
+    sanctionLetter:SanctionLetter;
+    ledger: Ledger[];
 }

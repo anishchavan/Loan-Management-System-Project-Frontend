@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class GenerateSanctionLetterComponent implements OnInit {
   sanctionForm: FormGroup;
   cust: CustomerDetails;
+  emiAmount: number;
   constructor(private fb: FormBuilder, private gs: VerifyApplicationService, private router:Router) {}
 
   ngOnInit(): void {
@@ -41,7 +42,29 @@ export class GenerateSanctionLetterComponent implements OnInit {
         loanTenure: this.cust.sanctionLetter.loanTenure,
         monthlyEmiAmount: this.cust.sanctionLetter.monthlyEmiAmount,
       });
+      this.calculateEMI();
     });
+    this.sanctionForm.valueChanges.subscribe(() => {
+      this.calculateEMI();
+    });
+  }
+
+  calculateEMI() {
+    const principal = this.sanctionForm.get('loanAmountSanctioned')?.value;
+    const interestRate = this.sanctionForm.get('rateOfInterest')?.value;
+    const tenure = this.sanctionForm.get('loanTenure')?.value;
+
+    if (principal && interestRate && tenure) {
+      const monthlyInterestRate = interestRate / (12 * 100);
+      const n = tenure;
+      const emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, n)) / (Math.pow(1 + monthlyInterestRate, n) - 1);
+      this.emiAmount = Math.round(emi);
+
+      this.sanctionForm.patchValue({ monthlyEmiAmount: this.emiAmount }, { emitEvent: false });
+    } else {
+      this.emiAmount = 0;
+      this.sanctionForm.patchValue({ monthlyEmiAmount: 0 }, { emitEvent: false });
+    }
   }
 
   onSubmit() {
