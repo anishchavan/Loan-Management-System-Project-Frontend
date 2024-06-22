@@ -23,6 +23,7 @@ import { OeModule } from './modules/oe/oe.module';
 import { CustomerLoginComponent } from './includes/customer-login/customer-login.component';
 import { LoginCompComponent } from './includes/login-comp/login-comp.component';
 import { CustomerModule } from './modules/customer/customer.module';
+import { AhModule } from './modules/ah/ah.module';
 
 
 
@@ -52,7 +53,8 @@ import { CustomerModule } from './modules/customer/customer.module';
     CrmModule,
     OeModule,
     CmModule,
-    CustomerModule
+    CustomerModule,
+    AhModule
   ],
   providers: [],
   bootstrap: [AppComponent],

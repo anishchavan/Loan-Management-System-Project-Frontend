@@ -33,5 +33,6 @@ export class EnquiryComponent implements OnInit {
     this.enquiryForm.reset();
   }
 
+ 
 
 }

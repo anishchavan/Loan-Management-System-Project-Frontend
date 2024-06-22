@@ -21,4 +21,10 @@ export class CustomerService {
     return this.http.put(`http://localhost:8084/customer/updateCustomer/SanctionLetterGenerated/${c.customerId}`,
       c)
   }
+
+  approvedCustomer(){
+    return this.http.get("http://localhost:8084/customer/getCustomer/SanctionLetterApproved");
+  }
+
+  
 }

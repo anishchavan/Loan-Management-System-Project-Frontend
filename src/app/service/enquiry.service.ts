@@ -35,4 +35,9 @@ export class EnquiryService {
       'http://localhost:8080/consumer/register/enquiries/approved'
     );
   }
+  getsingleEnquiry(aid:number) {
+    return this.http.get(
+      `http://localhost:8081/getsingleenquiry/${aid}`
+    );
+  }
 }

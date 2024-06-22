@@ -21,6 +21,11 @@ export class ViewVerifiedEnquiryComponent implements OnInit {
   }
   apply(applicantId:number)
   {
+    let aid = JSON.stringify(applicantId);
+    localStorage.setItem("applicantId",aid);
+      // this.router.navigateByUrl(`/verifyDocs/${applicantId}`);
+      console.log(applicantId);
     this.router.navigateByUrl('/apply/'+applicantId)
+
   }
 }

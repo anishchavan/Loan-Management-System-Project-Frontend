@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApplicationFormService } from '../../../service/application-form.service';
 import { Router } from '@angular/router';
+import { Enquiry } from '../../../model/enquiry';
+import { EnquiryService } from '../../../service/enquiry.service';
 
 @Component({
   selector: 'app-application-form',
@@ -24,13 +26,18 @@ export class ApplicationFormComponent implements OnInit {
   bankStatementImg: any;
   sanctionLetterImg: any;
 
+ enquiry: Enquiry;
+
   reader = new FileReader();
 
   constructor(
     private fb: FormBuilder,
     private applicationFormService: ApplicationFormService,
+    private es:EnquiryService,
     private router: Router
   ) { }
+
+ 
 
   ngOnInit(): void {
     this.customerDetails = this.fb.group({
@@ -117,7 +124,22 @@ export class ApplicationFormComponent implements OnInit {
         bankStatement: [],
       }),
     });
+    let aid = parseInt(localStorage.getItem('applicantId'));
+    this.es.getsingleEnquiry(aid).subscribe((data: Enquiry) => {
+      this.enquiry = data;
+
+      this.customerDetails.patchValue({
+        customerFirstName: this.enquiry.applicantName,
+        panCardNumber: this.enquiry.panCardNo,
+        mobileNumber:this.enquiry.applicantMobileNo,
+        customerEmailId:this.enquiry.applicantEmail,
+        customerCibilScore:this.enquiry.cibilScore
+        
+      });
+    });
+
   }
+
 
   onselectPanCard(event) {
     this.onSelectPanCard = event.target.files[0];
